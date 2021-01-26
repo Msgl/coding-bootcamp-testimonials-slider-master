@@ -1,0 +1,24 @@
+{
+  "name": "coding-bootcamp-testimonials-slider-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Msgl/coding-bootcamp-testimonials-slider-master.git"
+  },
+  "author": "Maria Glynou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Msgl/coding-bootcamp-testimonials-slider-master/issues"
+  },
+  "homepage": "https://github.com/Msgl/coding-bootcamp-testimonials-slider-master#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

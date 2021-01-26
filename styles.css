@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-image: url(/images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.slider {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide-image {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 40px;
+    background-image: url(/images/pattern-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.slide-content {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(/images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position: top center;
+}
+
+.testimonial {
+    font-weight: 300;
+    font-size: .7rem;
+    line-height: 1rem;
+    color: hsl(240, 38%, 20%);
+}
+
+.author {
+    margin-top: 30px;
+    color: hsl(240, 38%, 20%);
+    font-size: .5rem;
+    font-weight: 500;
+}
+
+.author span {
+    color: hsl(240, 18%, 77%);
+    font-weight: 300;
+    display: block;
+}
+
+.slide-image img {
+    height: 100%;
+    width: 300px;
+}
+
+.next, .prev {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.next::after,
+.prev::after {
+    content: "";
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-repeat: no-repeat;
+}
+
+.next::after {
+    background-image: url(/images/icon-next.svg);
+}
+
+.prev::after {
+    background-image: url(/images/icon-prev.svg);
+}
+
+.active {
+    display: flex;
+}
+
+.inactive {
+    display: none;
+}
+
