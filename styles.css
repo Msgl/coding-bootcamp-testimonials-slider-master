@@ -1,7 +1,7 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -9,101 +9,108 @@ html {
     font-size: 32px;
 }
 
-.container {
-    min-height: 100vh;
-    width: 100%;
+body {
+    align-items: center;
     background-image: url(/images/pattern-curve.svg);
-    background-repeat: no-repeat;
     background-position: center bottom;
+    background-repeat: no-repeat;
     background-size: contain;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
     align-items: center;
-    
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .slider {
-    max-width: 460px;
     margin: 0 auto;
-    position: relative;
+    max-width: 450px;
     min-height: 100%;
-    
+    position: relative;
 }
 
 .slide {
-    width: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
 }
 
 .slide-image {
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    padding: 40px;
     background-image: url(/images/pattern-bg.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    height: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    width: 100%;
 }
 
 .slide-content {
-    padding-top: 30px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
     background-image: url(/images/pattern-quotes.svg);
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: 80px;
-    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
 }
 
 .testimonial {
-    font-weight: 300;
-    font-size: .7rem;
-    line-height: 1rem;
     color: hsl(240, 38%, 20%);
+    font-size: .7rem;
+    font-weight: 300;
+    line-height: 1rem;
 }
 
 .author {
-    margin-top: 30px;
     color: hsl(240, 38%, 20%);
     font-size: .5rem;
     font-weight: 500;
+    margin-top: 30px;
 }
 
 .author span {
     color: hsl(240, 18%, 77%);
-    font-weight: 300;
     display: block;
+    font-weight: 300;
 }
 
 .slide-image img {
+    -webkit-box-shadow: 3px 26px 26px -12px rgba(0,0,0,0.21); 
+    box-shadow: 3px 26px 26px -12px rgba(0,0,0,0.21);
     height: 100%;
     width: 300px;
 }
 
 .slider-buttons {
-    background-color: rgb(248, 246, 246);
-    display: flex;
-    justify-content: center;
     align-items: center;
-    position: absolute;
+    background-color: white;
     border-radius: 15px;
-    left: 45%;
-    top: 50%;
+    bottom: 45%;
+    display: flex;
     height: 30px;
+    justify-content: center;
+    left: 42%;
+    position: absolute;
 }
 
 .next, .prev {
-    width: 10px;
-    height: 15px;
     cursor: pointer;
+    height: 15px;
     margin: 10px;
+    width: 10px;
 }
 
 .active {
@@ -114,8 +121,59 @@ html {
     display: none;
 }
 
-@media only screen and (min-width: 650px) {
-    .slider-buttons{
-        background-color: green;
+.tanya-copy {
+    filter:grayscale(100%);
+}
+
+/* Large screen */
+@media only screen and (min-width: 768px) {
+    .slider{
+        height: 400px;
+        max-width: 750px;
+    }
+
+    .slide {
+        flex-direction: row;
+    }
+
+    .slide-image {
+        background-position: left;
+        background-size: contain;
+        
+    }
+
+    .slide-content {
+        align-items: flex-start;
+        padding-left: 30px;
+        text-align: left;
+    }
+
+    .author span {
+        display: inline;
+    }
+
+    .slider-buttons {
+        bottom: 12%;
+        height: 30px;
+        left: 70%;
     }
 }
+
+/* Very small screen */
+@media only screen and (max-width: 421px){
+    .testimonial {
+        font-size: .5rem;
+        line-height: 0.7rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .slider {
+        width: 350px;
+    }
+
+    .slider-buttons {
+        left: 43%;
+        top: 55%;
+    }
+} 
